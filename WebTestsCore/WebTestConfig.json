@@ -1,0 +1,14 @@
+{
+  "TestEnvironment": "Regression",
+  "Regression": {
+    "browser": "Chrome",
+    "applicationUnderTest": "https://www.officeworks.com.au/",
+    "logTarget": "Log4Net",
+    "reportTarget": "Extent",
+    "testLogFileLocation": "TestLogs",
+    "extentReportLocation": "TestReports",
+    "testDataLocation": "Resporces\\TestData",
+    "projectName": "SeleniumExecrise",
+    "screenShotLocation": "Screenshots"
+  }
+}
