@@ -14,6 +14,7 @@ namespace TestFrameworkCore.Base
 
             //Open Browser
             OpenBrowser(Settings.WebBrowser);
+            //DriverContext.Browser.GoToUrl(Settings.AUT);
 
         }
 
@@ -26,10 +27,10 @@ namespace TestFrameworkCore.Base
                 case BrowserType.FireFox:                    
                     break;
                 case BrowserType.Chrome:
-                    //System.Environment.SetEnvironmentVariable("webdriver.chrome.driver", "");
+                    //System.Environment.SetEnvironmentVariable("webdriver.chrome.driver", Settings.WedDriverPath +@"\chromedriver.exe");
                     ChromeOptions options = new ChromeOptions();
                     options.AddArgument("start-maximized");
-                    DriverContext.Driver = new ChromeDriver(options);
+                    DriverContext.Driver = new ChromeDriver(Settings.WedDriverPath,options);
                     DriverContext.Browser = new Browser(DriverContext.Driver);
                     break;
             }

@@ -9,7 +9,8 @@
 # an end point as a background task
 Scenario: Add Items To Cart - Positive test
 	Given I navigate to the Officeworks website
-	And I have logged as "bharadwaj54@yahoo.com" using the login credentials	
+	And I have logged as "bharadwaj54@yahoo.com" and password "This!saTe$t108"	
+	#And I have logged as "bharadwaj54@yahoo.com" using the login credentials	
 	And I have navigated to "iPhones & Mobile Phones" section under the "Technology" main menu item
 	And Clicked to view the "IPhones"
 	When I add the "iPhone XS Max 64GB Gold" to my shopping cart

@@ -12,6 +12,8 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
     <PackageReference Include="MSTest.TestAdapter" Version="1.3.2" />
     <PackageReference Include="MSTest.TestFramework" Version="1.3.2" />
+    <PackageReference Include="NUnit" Version="3.12.0" />
+    <PackageReference Include="NUnit.Extension.NUnitV2ResultWriter" Version="3.6.0" />
     <PackageReference Include="Selenium.Chrome.WebDriver" Version="75.0.0" />
     <PackageReference Include="Selenium.Support" Version="3.141.0" />
     <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
@@ -28,6 +30,15 @@
     <None Update="Features\AddToCart.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>AddToCart.feature.cs</LastGenOutput>
+    </None>
+    <None Update="Resources\TestData\UserLogin.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\WebDrivers\chromedriver">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\WebDrivers\chromedriver.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="WebTestConfig.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

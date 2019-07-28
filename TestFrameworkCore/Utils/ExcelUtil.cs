@@ -16,7 +16,7 @@ namespace TestFrameworkCore.Utils
         /// Storing all the excel values in to the in-memory collections
         /// </summary>
         /// <param name="fileName"></param>
-        public static void PopulateInCollection(string fileName,string sheetName)
+        public static void PopulateInCollection(string fileName, string sheetName)
         {
             DataTable table = ExcelToDataTable(fileName, sheetName);
 
@@ -42,7 +42,7 @@ namespace TestFrameworkCore.Utils
         /// </summary>
         /// <param name="fileName"></param>
         /// <returns></returns>
-        public static DataTable ExcelToDataTable(string fileName,string sheetName)
+        public static DataTable ExcelToDataTable(string fileName, string sheetName)
         {
             using (var stream = File.Open(fileName, FileMode.Open, FileAccess.Read))
             {
@@ -85,22 +85,22 @@ namespace TestFrameworkCore.Utils
             }
         }
 
-        public static int GetRowNumber(string columnName,string uniqueColumnValue)
+        public static int GetRowNumber(string columnName, string uniqueColumnValue)
         {
             int rowNumber = -1;
             try
-            {                
+            {
                 //Retriving Data using LINQ to reduce much of iterations
                 rowNumber = (from colData in _dataCol
-                               where colData.colName == columnName && colData.colValue == uniqueColumnValue
-                               select colData.rowNumber).SingleOrDefault();
+                             where colData.colName == columnName && colData.colValue == uniqueColumnValue
+                             select colData.rowNumber).SingleOrDefault();
 
                 //var datas = dataCol.Where(x => x.colName == columnName && x.rowNumber == rowNumber).SingleOrDefault().colValue;
-                
+
             }
             catch (Exception e)
             {
-                
+
             }
             return Convert.ToInt32(rowNumber);
         }

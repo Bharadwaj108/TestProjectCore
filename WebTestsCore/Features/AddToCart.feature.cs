@@ -82,17 +82,17 @@ this.ScenarioInitialize(scenarioInfo);
 #line 11
  testRunner.Given("I navigate to the Officeworks website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 12
- testRunner.And("I have logged as \"bharadwaj54@yahoo.com\" using the login credentials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 13
+ testRunner.And("I have logged as \"bharadwaj54@yahoo.com\" and password \"This!saTe$t108\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 14
  testRunner.And("I have navigated to \"iPhones & Mobile Phones\" section under the \"Technology\" main" +
                     " menu item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 14
- testRunner.And("Clicked to view the \"IPhones\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 15
- testRunner.When("I add the \"iPhone XS Max 64GB Gold\" to my shopping cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("Clicked to view the \"IPhones\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 16
- testRunner.And("Selected the View cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I add the \"iPhone XS Max 64GB Gold\" to my shopping cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 17
+ testRunner.And("Selected the View cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 18
  testRunner.Then("The items \"iPhone XS Max 64GB Gold\" should be part of my cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

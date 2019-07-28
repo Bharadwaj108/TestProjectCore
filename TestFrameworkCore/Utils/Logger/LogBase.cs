@@ -10,6 +10,6 @@ namespace TestFrameworkCore.Utils.Logger
     {
         public abstract void Log(string message);
 
-        public abstract void Log(string message, LogType type);
+        public abstract void Log(string message, CustomLogType type);
     }
 }

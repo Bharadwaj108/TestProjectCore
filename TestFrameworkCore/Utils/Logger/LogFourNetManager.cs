@@ -21,7 +21,7 @@ namespace TestFrameworkCore.Utils.Logger
             log4net.Config.XmlConfigurator.Configure(repo, log4netConfig["log4net"]);
 
             log4net.Repository.Hierarchy.Hierarchy h =
-            (log4net.Repository.Hierarchy.Hierarchy)LogManager.GetRepository(repo.ToString());
+            (log4net.Repository.Hierarchy.Hierarchy)LogManager.GetRepository(repo.Name.ToString());
             foreach (IAppender a in h.Root.Appenders)
             {
                 if (a is FileAppender)
@@ -39,20 +39,20 @@ namespace TestFrameworkCore.Utils.Logger
             LogHelper.log.Info(message);
         }
 
-        public override void Log(string message, LogType type)
+        public override void Log(string message, CustomLogType type)
         {
             switch (type)
             {
-                case LogType.Error:
+                case CustomLogType.Error:
                     LogHelper.log.Error(message);
                     break;
-                case LogType.Info:
+                case CustomLogType.Info:
                     LogHelper.log.Info(message);
                     break;
-                case LogType.Fatal:
+                case CustomLogType.Fatal:
                     LogHelper.log.Fatal(message);
                     break;
-                case LogType.Warning:
+                case CustomLogType.Warning:
                     LogHelper.log.Warn(message);
                     break;
                 default:

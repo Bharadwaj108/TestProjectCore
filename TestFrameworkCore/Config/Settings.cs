@@ -18,7 +18,8 @@ namespace TestFrameworkCore.Config
         public static string ProjectName { get; set; }
         public static BrowserType WebBrowser { get; set; }
         public static string AUT { get; set; }
-        public static string ScreenShotPath { get; internal set; }
+        public static string ScreenShotPath { get; set; }
         public static ScenarioContext ScenarioContext { get; set; }
+        public static string WedDriverPath { get; set; }
     }
 }

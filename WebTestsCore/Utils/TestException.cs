@@ -6,7 +6,7 @@ namespace WebTestsCore.Utils
 {
     public class TestException : Exception
     {
-        public TestException(string scenarioName, LogType logType, string info, string additionalInfo = null, string furtherAdditionalInfo = null)
+        public TestException(string scenarioName, CustomLogType logType, string info, string additionalInfo = null, string furtherAdditionalInfo = null)
         {
             LogHelper.WriteToLog("Test Scenario Name: " + scenarioName, logType);
             LogHelper.WriteToLog(info, logType);
@@ -24,7 +24,7 @@ namespace WebTestsCore.Utils
             TestContext.WriteLine(info);
         }
 
-        public TestException(string scenarioName, LogType logType, string info, string screenshotFileName = null)
+        public TestException(string scenarioName, CustomLogType logType, string info, string screenshotFileName = null)
         {
             LogHelper.WriteToLog("Test Scenario Name: " + scenarioName, logType);
             LogHelper.WriteToLog(info, logType);

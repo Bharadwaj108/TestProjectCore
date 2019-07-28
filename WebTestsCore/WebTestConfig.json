@@ -7,7 +7,8 @@
     "reportTarget": "Extent",
     "testLogFileLocation": "TestLogs",
     "extentReportLocation": "TestReports",
-    "testDataLocation": "Resporces\\TestData",
+    "testDataLocation": "Resources\\TestData",
+    "webDriverLocation": "Resources\\WebDrivers",
     "projectName": "SeleniumExecrise",
     "screenShotLocation": "Screenshots"
   }

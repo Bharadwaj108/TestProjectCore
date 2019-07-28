@@ -2,6 +2,7 @@
 using System;
 using System.IO;
 using System.Reflection;
+using TestFrameworkCore.Base;
 using TestFrameworkCore.Config;
 using TestFrameworkCore.Utils.Logger;
 
@@ -36,12 +37,13 @@ namespace WebTestsCore.Config
             Settings.TestLogLocation = ConfigReader.config.GetSection(Settings.TestEnvironment).GetSection("testLogFileLocation").Value;
             Settings.TestLogFilePath = Path.Combine(TestResourceLocation()+@"\", Settings.TestLogLocation + @"\" + "Log - " + DateTime.Now.ToString("yyyyMMddHHmmss") + ".log");            
             Settings.TestDataLocation = Path.Combine(TestResourceLocation() + @"\", ConfigReader.config.GetSection(Settings.TestEnvironment).GetSection("testDataLocation").Value + @"\");
+            Settings.WedDriverPath = Path.Combine(TestResourceLocation() + @"\", ConfigReader.config.GetSection(Settings.TestEnvironment).GetSection("webDriverLocation").Value + @"\");
 
-            //Settings.ProjectName = WebTestConfiguration.TestSettings.WebTestSettings[Settings.TestEnvironment].ProjectName;
-            //string ScreenshotLocation = WebTestConfiguration.TestSettings.WebTestSettings[Settings.TestEnvironment].ScreenShotLocation;
-            //Settings.ScreenShotPath = Path.Combine(TestResourceLocation(), ScreenshotLocation + @"\Screenshots_" + DateTime.Now.ToString("yyyyMMddHHmmss") + @"\");
-            //Settings.WebBrowser = (BrowserType)Enum.Parse(typeof(BrowserType), (WebTestConfiguration.TestSettings.WebTestSettings[Settings.TestEnvironment].Browser));
-            //Settings.AUT = WebTestConfiguration.TestSettings.WebTestSettings[Settings.TestEnvironment].AUT;
+            Settings.ProjectName = ConfigReader.config.GetSection(Settings.TestEnvironment).GetSection("projectName").Value; 
+            string ScreenshotLocation = ConfigReader.config.GetSection(Settings.TestEnvironment).GetSection("screenShotLocation").Value;
+            Settings.ScreenShotPath = Path.Combine(TestResourceLocation() + @"\", ScreenshotLocation + @"\Screenshots_" + DateTime.Now.ToString("yyyyMMddHHmmss") + @"\");
+            Settings.WebBrowser = (BrowserType)Enum.Parse(typeof(BrowserType), (ConfigReader.config.GetSection(Settings.TestEnvironment).GetSection("browser").Value));
+            Settings.AUT = ConfigReader.config.GetSection(Settings.TestEnvironment).GetSection("applicationUnderTest").Value;
 
             //Settings.TestReportTarget = (ReportTarget)Enum.Parse(typeof(ReportTarget), (WebTestConfiguration.TestSettings.WebTestSettings[Settings.TestEnvironment].ReportTarget));
             //Settings.ExtentReportLocation = WebTestConfiguration.TestSettings.WebTestSettings[Settings.TestEnvironment].ExtentReportLocation;

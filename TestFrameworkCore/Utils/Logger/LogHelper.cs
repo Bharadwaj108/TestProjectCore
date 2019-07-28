@@ -41,7 +41,7 @@ namespace TestFrameworkCore.Utils.Logger
             }           
         }
 
-        public static void WriteToLog(string message,LogType logType)
+        public static void WriteToLog(string message,CustomLogType logType)
         {
             switch (Settings.TestLogTarget)
             {
@@ -57,7 +57,7 @@ namespace TestFrameworkCore.Utils.Logger
             }            
         }
 
-        public static void WriteToLog(string message, LogType logType, string screenShotFileName)
+        public static void WriteToLog(string message, CustomLogType logType, string screenShotFileName)
         {
             switch (Settings.TestLogTarget)
             {
