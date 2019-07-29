@@ -21,5 +21,6 @@ namespace TestFrameworkCore.Config
         public static string ScreenShotPath { get; set; }
         public static ScenarioContext ScenarioContext { get; set; }
         public static string WedDriverPath { get; set; }
+        public static string SearchEngineUrl { get; set; }
     }
 }

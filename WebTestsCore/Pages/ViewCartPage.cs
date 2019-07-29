@@ -49,7 +49,7 @@ namespace WebTestsCore.Pages
             catch (System.Exception ex)
             {
                 flag = false;
-                LogHelper.WriteToLog(MethodBase.GetCurrentMethod().Name, CustomLogType.Error, ex.StackTrace);
+                LogHelper.WriteToLog(MethodBase.GetCurrentMethod().Name, CustomLogType.Error, ex.StackTrace,"Cart");
             }
             return flag;
         }

@@ -60,8 +60,33 @@ namespace TestFrameworkCore.Utils.Logger
                     break;
             }
         }
-       
-       
+
+        public override void Log(string message, CustomLogType type, string addtionalInfo)
+        {
+            switch (type)
+            {
+                case CustomLogType.Error:
+                    LogHelper.log.Error(message);
+                    LogHelper.log.Error(addtionalInfo);
+                    break;
+                case CustomLogType.Info:
+                    LogHelper.log.Info(message);
+                    LogHelper.log.Info(addtionalInfo);
+                    break;
+                case CustomLogType.Fatal:
+                    LogHelper.log.Fatal(message);
+                    LogHelper.log.Fatal(addtionalInfo);
+                    break;
+                case CustomLogType.Warning:
+                    LogHelper.log.Warn(message);
+                    LogHelper.log.Warn(addtionalInfo);
+                    break;
+                default:
+                    LogHelper.log.Info(message);
+                    LogHelper.log.Info(addtionalInfo);
+                    break;
+            }
+        }
     }
    
 }

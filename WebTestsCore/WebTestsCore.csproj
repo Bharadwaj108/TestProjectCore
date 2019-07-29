@@ -51,10 +51,22 @@
       <LastGenOutput>AddToCart.feature.cs</LastGenOutput>
       <Generator Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'"></Generator>
     </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\ContactUs.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ContactUs.feature.cs</LastGenOutput>
+    </SpecFlowFeatureFiles>
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Resources\TestData\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Features\ContactUs.feature.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ContactUs.feature</DependentUpon>
+    </Compile>
   </ItemGroup>
 
 </Project>

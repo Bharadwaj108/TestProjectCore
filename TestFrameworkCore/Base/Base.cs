@@ -13,8 +13,14 @@ namespace TestFrameworkCore.Base
 
         }
 
-        protected TPage GetInstance<TPage>() where TPage : BasePage, new() => (TPage)Activator.CreateInstance(typeof(TPage));
+        protected TPage GetInstance<TPage>() where TPage : BasePage, new()
+        {
+            return (TPage)Activator.CreateInstance(typeof(TPage));
+        }
 
-        public TPage As<TPage>() where TPage : BasePage => (TPage)this;
+        public TPage As<TPage>() where TPage : BasePage
+        {
+            return (TPage)this;
+        }
     }
 }

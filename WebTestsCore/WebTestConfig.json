@@ -3,6 +3,7 @@
   "Regression": {
     "browser": "Chrome",
     "applicationUnderTest": "https://www.officeworks.com.au/",
+    "searchEngineUrl": "https://www.google.com.au/",
     "logTarget": "Log4Net",
     "reportTarget": "Extent",
     "testLogFileLocation": "TestLogs",
