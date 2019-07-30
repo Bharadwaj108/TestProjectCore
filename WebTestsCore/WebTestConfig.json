@@ -11,6 +11,7 @@
     "testDataLocation": "Resources\\TestData",
     "webDriverLocation": "Resources\\WebDrivers",
     "projectName": "SeleniumExecrise",
-    "screenShotLocation": "Screenshots"
+    "screenShotLocation": "Screenshots",
+    "pageTimeOut": 10000
   }
 }

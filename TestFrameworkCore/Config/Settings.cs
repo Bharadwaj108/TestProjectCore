@@ -22,5 +22,6 @@ namespace TestFrameworkCore.Config
         public static ScenarioContext ScenarioContext { get; set; }
         public static string WedDriverPath { get; set; }
         public static string SearchEngineUrl { get; set; }
+        public static int Timeout { get; set; }
     }
 }

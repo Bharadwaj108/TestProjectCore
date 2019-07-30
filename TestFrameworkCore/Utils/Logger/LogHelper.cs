@@ -65,6 +65,7 @@ namespace TestFrameworkCore.Utils.Logger
                     if (logger is null)
                         logger = new LogFourNetManager();
                     logger.Log(message, logType);
+                    //ToDo:Add the time stamp to the screenshot file
                     string screenshotFilePath = BrowserScreenshot.CaptureBrowserScreenshot(screenShotFileName);
                     logger.Log("Screenshot added to loaction : " + screenshotFilePath, logType);                    
                     break;

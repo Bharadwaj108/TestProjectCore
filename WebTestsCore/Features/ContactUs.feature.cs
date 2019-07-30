@@ -84,6 +84,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 8
  testRunner.And("Click on the link with the search link \"https://www.securepay.com.au/\" from the s" +
                     "earch results", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 9
+ testRunner.When("Navigate to \"ContactUs\" page in the SecurePay website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 10
+ testRunner.Then("Contact Us Page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 11
+ testRunner.Given("I generate random Contact test data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 12
+ testRunner.And("Fill the Contact Details in the Contact Us form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

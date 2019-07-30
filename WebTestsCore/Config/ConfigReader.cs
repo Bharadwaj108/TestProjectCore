@@ -44,7 +44,8 @@ namespace WebTestsCore.Config
             Settings.ScreenShotPath = Path.Combine(TestResourceLocation() + @"\", ScreenshotLocation + @"\Screenshots_" + DateTime.Now.ToString("yyyyMMddHHmmss") + @"\");
             Settings.WebBrowser = (BrowserType)Enum.Parse(typeof(BrowserType), (ConfigReader.config.GetSection(Settings.TestEnvironment).GetSection("browser").Value));
             Settings.AUT = ConfigReader.config.GetSection(Settings.TestEnvironment).GetSection("applicationUnderTest").Value;
-            Settings.SearchEngineUrl = ConfigReader.config.GetSection(Settings.TestEnvironment).GetSection("searchEngineUrl").Value;            
+            Settings.SearchEngineUrl = ConfigReader.config.GetSection(Settings.TestEnvironment).GetSection("searchEngineUrl").Value;
+            Settings.Timeout =  int.Parse(ConfigReader.config.GetSection(Settings.TestEnvironment).GetSection("pageTimeOut").Value);
         }
     }
 }
